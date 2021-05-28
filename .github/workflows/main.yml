@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: gday step
         id: gday
-        uses: bcumming/hw-action@v1.3
+        uses: bcumming/hw-action@v1.4
         with:
           who-to-greet: 'Ben from Ballandean'
       # Use the output from the `gday` step
