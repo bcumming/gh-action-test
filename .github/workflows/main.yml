@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: test the gday
+    steps:
+      - name: gday step
+        id: gday
+        uses: bcumming/hw-action@v1
+        with:
+          who-to-greet: 'Ben from Brisbane'
+      # Use the output from the `gday` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.gday.outputs.time }}"
